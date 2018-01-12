@@ -4,7 +4,7 @@ The name Hoaxy is a trademark of Indiana University. Neither the name "Hoaxy" no
 
 # Hoaxy frontend
 
-This is the frontend of [Hoaxy](http://hoaxy.iuni.iu.edu), and it is intended to be used in conjunction with an implementation of the Hoaxy backend platform, which is available at: 
+This is the **(adjusted)** frontend of [Hoaxy](http://hoaxy.iuni.iu.edu) and it is intended to be used in conjunction with an implementation of the Hoaxy backend platform, which is available at: 
 
     http://github.com/iunetsci/hoaxy-backend
 
