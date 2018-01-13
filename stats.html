@@ -2,7 +2,8 @@
 <html>
 
 <head>
-	<title>Claim and Fact Checking Spreading Statistics</title>
+	<!-- <title>Claim and Fact Checking Spreading Statistics</title> -->
+	<title>Behauptungs- und Faktencheck Verbreitungs-Darstellung</title>
 	<!--#include virtual="./includes/includes.html" -->
 </head>
 
@@ -11,13 +12,13 @@
 	<nav class="container_fluid tab_container">
 		<ul class="nav nav-tabs container" role=tablist >
 			<li class="nav-item">
-				<a class="nav-link active" href="#popular_articles" role="tab" data-toggle="tab">Popular Articles</a>
+				<a class="nav-link active" href="#popular_articles" role="tab" data-toggle="tab">Beliebte Artikel</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#influential_users" role="tab" data-toggle="tab">Influential Users</a>
+				<a class="nav-link" href="#influential_users" role="tab" data-toggle="tab">Einflussreiche Nutzer</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#active_users" role="tab" data-toggle="tab">Active Users</a>
+				<a class="nav-link" href="#active_users" role="tab" data-toggle="tab">Aktive Nutzer</a>
 			</li>
 		</ul>
 	</nav>
@@ -26,11 +27,14 @@
 		<section class="tab-pane active container-fluid" role="tabpanel" id="popular_articles">
 			<div class="row">
 				<div class="col-md-6">
-					<p>Most popular <span class="">claims</span> articles in the last month</p>
+					<!-- 'in the last month'->'im vorherigen Monat' 
+						alternative translations for 'last' might be: letzten, vorangegangenen
+					-->
+					<p>Die populärsten <span class="">Behauptungs</span> Artikel im vorherigen Monat</p>
 					<div class="table-responsive" id="popular_articles_claim"></div>
 				</div>
 				<div class="col-md-6">
-					<p>Most popular <span class="">fact checking</span> articles in the last month</p>
+					<p>Die populärsten <span class="">Fakten</span> Artikel im vorherigen Monat</p>
 					<div class="table-responsive" id="popular_articles_fact_checking"></div>
 				</div>
 			</div>
@@ -40,11 +44,12 @@
 		<section class="tab-pane container-fluid" role="tabpanel" id="influential_users">
 			<div class="row">
 				<div class="col-md-6">
-					<p>Most influential users sharing <span class="">claims</span> in the last month</p>
+					<p>Die einflussreichsten Nutzer welche <span class="">Behauptungen</span> im vorherigen Monat teilten</p>
 					<div class="table-responsive" id="influential_users_claim"></div>
 				</div>
 				<div class="col-md-6">
-					<p>Most influential users sharing <span class="">fact checking</span> in the last month</p>
+					<!-- <p>Most influential users sharing <span class="">fact checking</span> im vorherigen Monat</p> -->
+					<p>Die einflussreichsten Nutzer welche <span class="">Fakten</span> im vorherigen Monat teilten</p>
 					<div class="table-responsive" id="influential_users_fact_checking"></div>
 				</div>
 			</div>
@@ -54,11 +59,11 @@
 		<section class="tab-pane container-fluid" role="tabpanel" id="active_users">
 			<div class="row">
 				<div class="col-md-6">
-					<p>Most active users sharing <span class="">claims</span> in the last month</p>
+					<p>Die aktivsten Nutzer welche <span class="">Behauptungen</span> im vorherigen Monat teilten</p>
 					<div class="table-responsive" id="active_users_claim"></div>
 				</div>
 				<div class="col-md-6">
-					<p>Most active users sharing <span class="">fact checking</span> in the last month</p>
+					<p>Die aktivsten Nutzer welche <span class="">Fakten</span> im vorherigen Monat teilten</p>
 					<div class="table-responsive" id="active_users_fact_checking"></div>
 				</div>
 			</div>
@@ -72,8 +77,9 @@
 			headers: configuration.top_articles_headers,
 			dataType: 'json' ,
 			success: function(data) {
-				$("#popular_articles_claim").append('<tr><th>Capture date</th><th>Title</th><th>Tweets</th></tr>');
-				$("#popular_articles_fact_checking").append('<tr><th>Capture date</th><th>Title</th><th>Tweets</th></tr>');
+				// might translate capture date as feststellungsdatum
+				$("#popular_articles_claim").append('<tr><th>Aufnahmedatum</th><th>Titel</th><th>Tweets</th></tr>');
+				$("#popular_articles_fact_checking").append('<tr><th>Aufnahmedatum</th><th>Titel</th><th>Tweets</th></tr>');
 				$.each(data['articles'], function(i, h) {
 					var capture_date = h['capture_date'].split('T')[0];
 					var row = '<tr><td>' + capture_date + '</td>'
@@ -91,10 +97,11 @@
 			headers: configuration.top_users_headers,
 			dataType: 'json' ,
 			success: function(data) {
-				$("#active_users_claim").append('<tr><th>screen name</th><th>tweets</th><th>Botometer score</th></tr>');
-				$("#active_users_fact_checking").append('<tr><th>screen name</th><th>tweets</th><th>Botometer score</th></tr>');
-				$("#influential_users_claim").append('<tr><th>screen name</th><th>retweets</th><th>Botometer score</th></tr>');
-				$("#influential_users_fact_checking").append('<tr><th>screen name</th><th>retweets</th><th>Botometer score</th></tr>');
+				// screen name = Anzeigename or Benutzername?
+				$("#active_users_claim").append('<tr><th>Anzeigename</th><th>tweets</th><th>Botometer Punkte</th></tr>');
+				$("#active_users_fact_checking").append('<tr><th>Anzeigename</th><th>tweets</th><th>Botometer Punkte</th></tr>');
+				$("#influential_users_claim").append('<tr><th>Anzeigename</th><th>retweets</th><th>Botometer Punkte</th></tr>');
+				$("#influential_users_fact_checking").append('<tr><th>Anzeigename</th><th>retweets</th><th>Botometer Punkte</th></tr>');
 				var empty_or_na;
 				// test whether any bot_score exists
 				if (data['spreaders'].every(function(x){return x['bot_score'] === null})){
