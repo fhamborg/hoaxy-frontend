@@ -157,3 +157,39 @@ li
 {
 white-space: nowrap;
 }
+
+
+/* navbar adjustments */
+.navbar, .navbar-inverse, nav {
+    background-color: #59c7eb;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hoaxy-navbar ul li a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:focus, 
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #a6e1f4;
+}
+
+.container > #hoaxy-navbar {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.navbar-right {
+    padding-right: 100px;
+    /*padding-left: -100px;*/
+}
+
+.navbar-left {
+    padding-left: 100px;
+    /*padding-right: 200px;*/
+}
+
+/**** end ****/
