@@ -6,6 +6,11 @@ font form uni.kn: theinhardt font is under license
 free and similar font would be https://fonts.google.com/specimen/Roboto
 */
 
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
 /*Header*/
 header
 {
@@ -102,7 +107,7 @@ li
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba(255, 255, 255, .7);
+	/*background: rgba(255, 255, 255, .7);*/
 	/*background: green;*/
 	z-index: 20000;
 }
@@ -222,7 +227,7 @@ header.opener > .background-img {
 
     /*background-image: url("hoaxyIMG/social2.jpeg");*/
     /*background-image: url("hoaxyIMG/social1.jpeg");*/
-    background-image: url("hoaxyIMG/news3.jpeg");
+    background-image: url("./static/images/news1.jpeg");
     background-size: 100%;
     background-position: center;
 
