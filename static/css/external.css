@@ -1,5 +1,9 @@
 /*
 lightblue color from uni.kn: #59c7eb
+
+font form uni.kn: theinhardt font is under license
+
+free and similar font would be https://fonts.google.com/specimen/Roboto
 */
 
 /*Header*/
@@ -193,3 +197,9 @@ white-space: nowrap;
 }
 
 /**** end ****/
+
+
+/* hide these sections on start*/
+#graphs, #articles {
+    display: none;
+}
