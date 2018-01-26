@@ -167,9 +167,14 @@ li
 white-space: nowrap;
 }
 
+footer {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
 
 /* navbar adjustments */
-.navbar, .navbar-inverse, nav {
+.navbar, .navbar-inverse, nav, footer {
     background-color: #59c7eb;
     border: none;
     padding: 0;
