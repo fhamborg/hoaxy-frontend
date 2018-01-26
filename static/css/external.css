@@ -1,3 +1,16 @@
+/*
+lightblue color from uni.kn: #59c7eb
+
+font form uni.kn: theinhardt font is under license
+
+free and similar font would be https://fonts.google.com/specimen/Roboto
+*/
+
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
 /*Header*/
 header
 {
@@ -94,7 +107,7 @@ li
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: rgba(255, 255, 255, .7);
+	/*background: rgba(255, 255, 255, .7);*/
 	/*background: green;*/
 	z-index: 20000;
 }
@@ -152,4 +165,133 @@ li
 #popular_articles_fact_checking tr td:first-child
 {
 white-space: nowrap;
+}
+
+footer {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+
+/* navbar adjustments */
+.navbar, .navbar-inverse, nav, footer {
+    background-color: #59c7eb;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hoaxy-navbar ul li a {
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:focus, 
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #a6e1f4;
+}
+
+.container > #hoaxy-navbar {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.navbar-right {
+    padding-right: 100px;
+    /*padding-left: -100px;*/
+}
+
+.navbar-left {
+    padding-left: 100px;
+    /*padding-right: 200px;*/
+}
+
+/**** end ****/
+
+
+/* hide these sections on start*/
+#graphs, #articles {
+    display: none;
+}
+
+
+
+
+header.opener {
+    width: 100%;
+    height: 400px;
+}
+
+header.opener > .background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 400px;
+    width: 100%;
+
+    /*background-image: url("hoaxyIMG/social2.jpeg");*/
+    /*background-image: url("hoaxyIMG/social1.jpeg");*/
+    background-image: url("./static/images/news1.jpeg");
+    background-size: 100%;
+    background-position: center;
+
+    z-index: -1;
+    display: block;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+header.opener > .overlay-header-title {
+    position: fixed;
+    left: 50%;
+    top: 160px;
+    text-align: center;
+    background-color: rgba(250, 250, 250, 0.4);
+    /*background-color: rgba(89,199,235, 0.4);*/
+    
+    /*center div*/
+    width: 75%;
+    left: 50%;
+    margin-left: -37.5%;
+    z-index: 9999;
+}
+
+.overlay-header-title h1 {
+    font-size: 5em;
+    /*color: #59c7eb;*/
+}
+
+.overlay-header-title h2 {
+    font-size: 2em;
+}
+
+#form {
+    text-align: center;
+}
+
+button.btn-blue {
+    background-color: #59c7eb;
+    color: #fff;
+    border: 1px #59c7eb;
+}
+
+button.btn-blue:hover,
+button.btn-blue:active,
+button.btn-blue:focus,
+button.btn-blue:target,
+button.btn:active,
+button.btn:focus,
+button.btn:target,
+button.btn-primary:active,
+button.btn-primary:focus,
+button.btn-primary:target
+{
+    background-color: #a6e1f4;
+    border: 1px #59c7eb;
+    outline: none !important;
 }
