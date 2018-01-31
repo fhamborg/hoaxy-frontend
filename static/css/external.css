@@ -274,22 +274,22 @@ header.opener > .overlay-header-title {
     text-align: center;
 }
 
-button.btn-blue {
+.btn-blue {
     background-color: #59c7eb;
     color: #fff;
     border: 1px #59c7eb;
 }
 
-button.btn-blue:hover,
-button.btn-blue:active,
-button.btn-blue:focus,
-button.btn-blue:target,
-button.btn:active,
-button.btn:focus,
-button.btn:target,
-button.btn-primary:active,
-button.btn-primary:focus,
-button.btn-primary:target
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus,
+.btn-blue:target,
+.btn:active,
+.btn:focus,
+.btn:target,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:target
 {
     background-color: #a6e1f4;
     border: 1px #59c7eb;
