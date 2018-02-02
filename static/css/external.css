@@ -295,3 +295,11 @@ header.opener > .overlay-header-title {
     border: 1px #59c7eb;
     outline: none !important;
 }
+
+ol li {
+    font-weight: 700;
+}
+
+ol li p {
+    font-weight: 400;
+}
