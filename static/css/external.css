@@ -6,9 +6,16 @@ font form uni.kn: theinhardt font is under license
 free and similar font would be https://fonts.google.com/specimen/Roboto
 */
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
 
 body {
     font-family: Roboto, sans-serif;
+    display: table;
+    margin: 0;
 }
 
 /*Header*/
@@ -19,7 +26,7 @@ header
 }
 footer
 {
-    margin-top: 3rem;
+    margin-top: 3em;
 }
 
 section
@@ -107,9 +114,9 @@ li
 	left: 0;
 	bottom: 0;
 	right: 0;
-	/*background: rgba(255, 255, 255, .7);*/
-	/*background: green;*/
-	z-index: 20000;
+	/*background: rgba(255, 255, 255, .7);
+	background: green;
+	z-index: 20000;*/
 }
 
 
@@ -167,18 +174,24 @@ li
 white-space: nowrap;
 }
 
-footer {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+footer {    
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 2em;
+    background-color: #59c7eb;
+    min-height: 100px;
+    display: table-row;
 }
 
 
 /* navbar adjustments */
-.navbar, .navbar-inverse, nav, footer {
+.navbar, .navbar-inverse, nav {
     background-color: #59c7eb;
     border: none;
     padding: 0;
     margin: 0;
+    /*! min-height: 50px; */
 }
 
 #hoaxy-navbar ul li a {
@@ -232,7 +245,7 @@ header.opener > .background-img {
 
     /*background-image: url("hoaxyIMG/social2.jpeg");*/
     /*background-image: url("hoaxyIMG/social1.jpeg");*/
-    background-image: url("./static/images/news1.jpeg");
+    background-image: url("../images/news1.jpeg");    
     background-size: 100%;
     background-position: center;
 
@@ -251,8 +264,8 @@ header.opener > .overlay-header-title {
     left: 50%;
     top: 160px;
     text-align: center;
-    background-color: rgba(250, 250, 250, 0.4);
-    /*background-color: rgba(89,199,235, 0.4);*/
+    /*! background-color: rgba(250, 250, 250, 0.4); */
+    /*! background-color: rgba(89,199,235, 0.4); */
     
     /*center div*/
     width: 75%;
@@ -302,4 +315,42 @@ ol li {
 
 ol li p {
     font-weight: 400;
+}
+
+
+@media (max-width: 991px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
 }
