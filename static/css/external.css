@@ -255,6 +255,10 @@ footer {
     background-color: #a6e1f4;
 }
 
+#dropdown-nav-icon {
+    display: none;
+}
+
 
 /* hide these sections on start*/
 #graphs, #articles {
@@ -349,4 +353,54 @@ ol li {
 
 ol li p {
     font-weight: 400;
+}
+
+#navbar-brand {
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width: 770px) {
+
+    #hoaxy-navbar {
+        min-height: 55px;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    #hoaxy-navbar .container {
+        background-color: #59c7eb;
+    }
+
+    .nav-right {
+        width: 100%;
+    }
+
+    .nav-right ul li  {
+        width: 100%;
+        display: block;
+        height: 55px;
+        padding: 0;
+        margin: 0;
+        line-height: 55px;
+    }
+
+    #hoaxy-navbar ul li a {
+        display: block;
+        padding: 0;
+        width: 100%;
+        height: 55px;
+        margin-left: -20px;
+    }
+
+    #dropdown-nav-icon, #navbar-brand {
+        display: block;
+        float: right;
+        margin-top: 20px;
+    }
+
+    .toggle {
+        display: none;
+    }
 }
