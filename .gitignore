@@ -7,4 +7,3 @@ vagrantfile
 node_modules
 gulpfile.js
 package.json
-config.js
