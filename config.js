@@ -1,3 +1,4 @@
+
 configuration = function(){
 	var obj = {}
 
