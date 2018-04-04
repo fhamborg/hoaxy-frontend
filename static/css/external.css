@@ -177,48 +177,14 @@ white-space: nowrap;
 
 footer {    
     position: relative;
+    display: table-row;
     width: 100%;
     bottom: 0;
-    padding-bottom: 2em;
     background-color: #59c7eb;
     min-height: 100px;
-    display: table-row;
+    margin-bottom: 0px;
 }
 
-
-/* navbar adjustments */
-/*
-.navbar, .navbar-inverse, nav {
-    background-color: #59c7eb;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-#hoaxy-navbar ul li a {
-    color: #000;
-}
-
-.navbar-inverse .navbar-nav > .active > a, 
-.navbar-inverse .navbar-nav > .active > a:focus, 
-.navbar-inverse .navbar-nav > .active > a:hover {
-    background-color: #a6e1f4;
-}
-
-.container > #hoaxy-navbar {
-    padding-right: 1em;
-    padding-left: 1em;
-}
-
-.navbar-right {
-    padding-right: 100px;
-}
-
-.navbar-left {
-    padding-left: 100px;
-}
-
-/**** end ****/
 
 #hoaxy-navbar {
     position: absolute;
@@ -411,4 +377,8 @@ ol li p {
     .toggle {
         display: none;
     }
+}
+
+.impr {
+    padding-top: 50px;
 }
