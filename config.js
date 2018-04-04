@@ -2,11 +2,6 @@
 configuration = function(){
 	var obj = {}
 
-	
-	// mashapi token from https://github.com/fhamborg/hoaxy
-	// 							BaqsVW3OeZmshiWkpF0BpsJk3yvap1PcHTJjsn9YZuQSkXh3oJ
-	// X-Mashape-Proxy-Secret: 	F195eMAQ1q9m6de5n599VM3SYG4lGdYrCm0rF6F6we7e4EeuCf
-
 	var mashape_key = "BaqsVW3OeZmshiWkpF0BpsJk3yvap1PcHTJjsn9YZuQSkXh3oJ";
 
 	obj.articles_url = "https://api-hoaxy.p.mashape.com/articles";
