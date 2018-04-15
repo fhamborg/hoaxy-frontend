@@ -109,7 +109,8 @@
             <dd>
                 A: <u>Wir <em>entscheiden nicht</em> was wahr oder falsch ist</u>. Nicht alle Behauptungen, weche man auf Hoaxy&reg; darstellen kann sind falsch, noch ist es möglich alle falschen Nachrichten zu verfolgen. <br>
                 TODO: 
-                We aren’t even saying that the fact checkers are 100% correct all the time. You can use the Hoaxy&reg; tools to observe how unverified stories and the fact checking of those stories spread on public social media. We welcome users to click on links to fact-checking sites to see what they’ve found in their research, but it’s up for you to evaluate the evidence about a claim and its rebuttal.
+                Wir behaupten auch nicht, dass die Fakt-Checker zu 100 Prozent immer stimmen. Sie könne Hoaxy benutzen umbestätigte Nachrichten 
+                 You can use the Hoaxy&reg; tools to observe how unverified stories and the fact checking of those stories spread on public social media. We welcome users to click on links to fact-checking sites to see what they’ve found in their research, but it’s up for you to evaluate the evidence about a claim and its rebuttal.
             </dd>
 
 
@@ -131,42 +132,43 @@
             </dd>
 
 
-            <dt>F: What is the source of social media data?</dt>
+            <dt>F: Was ist die Quelle der Social Media Daten?</dt>
             <dd>
-                A: At the moment we only collect data from Twitter.
+                A: Im Moment werden Daten von Twitter gesammelt.
             </dd>
 
 
-            <dt>F: Do you access any private conversations?</dt>
+            <dt>F: Werden auf irgendwelche privaten Konversationen zugegriffen?</dt>
             <dd>
-                A: No, we only access public tweets.
+                A: Nein, wir greifen nur auf öffentliche Tweets zu.
             </dd>
 
 
-            <dt>F: Do you provide an API to the data you collect?</dt>
+            <dt>F: Wird eine API zu den gesammlten Daten zur Verfügung gestellt?</dt>
             <dd>
-                A: Yes, check out the free <a href="https://market.mashape.com/truthy/hoaxy" target="_blank">Hoaxy&reg; API</a> available on Mashape.
+                A: Ja, es gibt eine freie <a href="https://market.mashape.com/truthy/hoaxy" target="_blank">Hoaxy&reg; API</a> verfügbar auf Mashape.
             </dd>
 
-            <dt>F: How can I contact the team behind Hoaxy&reg;?</dt>
+            <dt>F: Wie kann ich das Team hinter Hoaxy&reg; kontaktieren?</dt>
             <dd>
-                A: You can contact the team using the <a href="http://osome.iuni.iu.edu/contact/" target="_blank">contact information provided on the OSoMe website</a>.
+                A: Mittels der <a href="http://osome.iuni.iu.edu/contact/" target="_blank">Kontakt Informationen auf der OSoMe Website</a>.
             </dd>
 
 
-            <dt>F: Can I cite Hoaxy&reg; in my work?</dt>
+            <dt>F: Kann ich die Hoaxy&reg; Seite in einer Arbeit zitieren?</dt>
             <dd>
-                A: Yes, if you use Hoaxy&reg; for your work then please cite the following article:
+                A: Ja, wenn du Hoaxy&reg; für eine Arbeit berwendest dann zitieren Sie den folgenden Artikel:
                 <br />
                 <p>
-                    Chengcheng Shao, Giovanni Luca Ciampaglia, Alessandro Flammini, and Filippo Menczer (2016). Hoaxy&reg;: A Platform for Tracking Online Misinformation. In Proceedings of the 25th International Conference Companion on World Wide Web (WWW '16 Companion). Pages 745-750. DOI: http://dx.doi.org/10.1145/2872518.2890098               </p>
+                    Chengcheng Shao, Giovanni Luca Ciampaglia, Alessandro Flammini, und Filippo Menczer (2016). Hoaxy&reg;: A Platform for Tracking Online Misinformation. In Proceedings of the 25th International Conference Companion on World Wide Web (WWW '16 Companion). Pages 745-750. DOI: http://dx.doi.org/10.1145/2872518.2890098               </p>
 
-                    You can also import the following bibtex code into your favorite bibliographic tool:
+                    Sie können auch den folgenden bibtex Code in Ihr liebstes bibliographic Tool kopieren:
+                    <!-- You can also import the following bibtex code into your favorite bibliographic tool: -->
                     <br />
                     <br />
                     <pre>
 @inproceedings{Shao:2016:HPT:2872518.2890098,
-    author = {Shao, Chengcheng and Ciampaglia, Giovanni Luca and Flammini, Alessandro and Menczer, Filippo},
+    author = {Shao, Chengcheng und Ciampaglia, Giovanni Luca und Flammini, Alessandro und Menczer, Filippo},
     title = {Hoaxy: A Platform for Tracking Online Misinformation},
     booktitle = {Proceedings of the 25th International Conference Companion on World Wide Web},
     series = {WWW '16 Companion},
@@ -180,15 +182,17 @@
                 </dd>
 
 
-                <dt>F: What technology does Hoaxy&reg; use?</dt>
+                <dt>F: Welche Technologien benutzt Hoaxy&reg;?</dt>
                 <dd>
-                    A: Hoaxy&reg; is written primarily in Python. On the backend we use Apache Lucene (for full-text indexing and retrieval), Scrapy (for web crawling), Apache Tika (for metadata extraction), RSS (for feed aggregation), PostgreSQL (for data indexing and storage), and SQLAlchemy (for object-relational mapping). On the frontend we use Bootstrap, NV.D3 (for the chart), and Sigma-js (for the network). We collect data from Twitter using the public streaming API.
+                    A: Hoaxy&reg; ist hauptsächlich in Python geschrieben. 
+                    TODO:
+                    Auf der Backend-Seite wird Apache Lucene (for full-text indexing and retrieval) genutzt, Scrapy (for web crawling), Apache Tika (for metadata extraction), RSS (for feed aggregation), PostgreSQL (for data indexing and storage), and SQLAlchemy (for object-relational mapping). On the frontend we use Bootstrap, NV.D3 (for the chart), and Sigma-js (for the network). We collect data from Twitter using the public streaming API.
                 </dd>
 
 
-                <dt>F: Is Hoaxy&reg; open source?</dt>
+                <dt>F: Ist Hoaxy&reg; ein Open Source Projekt?</dt>
                 <dd>
-                    A: Yes. This makes it possible for colleagues, fact checkers, and reporters around the world to deploy versions of the tool to map the spread of claims in their own countries and in languages other then English. The code is available in two repositories: a <a href="https://github.com/IUNetSci/hoaxy-backend">backend</a> and a <a href="https://github.com/IUNetSci/hoaxy-frontend">frontend</a>.  Please contact <a href="http://osome.iuni.iu.edu/contact/">us</a> to let us know if you are using our code.
+                    A: Ja. This makes it possible for colleagues, fact checkers, and reporters around the world to deploy versions of the tool to map the spread of claims in their own countries and in languages other then English. The code is available in two repositories: a <a href="https://github.com/IUNetSci/hoaxy-backend">backend</a> and a <a href="https://github.com/IUNetSci/hoaxy-frontend">frontend</a>.  Please contact <a href="http://osome.iuni.iu.edu/contact/">us</a> to let us know if you are using our code.
                 </dd>
 
 
