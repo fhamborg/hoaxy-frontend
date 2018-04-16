@@ -1,5 +1,6 @@
 
 configuration = function(){
+
 	var obj = {} 
 
 	var mashape_key = "BaqsVW3OeZmshiWkpF0BpsJk3yvap1PcHTJjsn9YZuQSkXh3oJ";
@@ -35,4 +36,3 @@ configuration = function(){
 
 	return obj;
 }();
-
