@@ -32,11 +32,11 @@
 					<!-- 'in the last month'->'im letzten Monat' 
 						alternative translations for 'last' might be: vorherigen, vorangegangenen
 					-->
-					<p>Die populärsten <span class="">Behauptungs</span> Artikel im letzten Monat</p>
+					<p>Die populärsten <span class="stat-claims">Behauptungs</span> Artikel im letzten Monat</p>
 					<div class="table-responsive" id="popular_articles_claim"></div>
 				</div>
 				<div class="col-md-6">
-					<p>Die populärsten <span class="">Fakten geprüften</span> Artikel im letzten Monat</p>
+					<p>Die populärsten <span class="stat-facts">Fakten geprüften</span> Artikel im letzten Monat</p>
 					<div class="table-responsive" id="popular_articles_fact_checking"></div>
 				</div>
 			</div>
@@ -46,12 +46,12 @@
 		<section class="tab-pane container-fluid" role="tabpanel" id="influential_users">
 			<div class="row">
 				<div class="col-md-6">
-					<p>Die einflussreichsten Nutzer welche <span class="">Behauptungen</span> im letzten Monat teilten</p>
+					<p>Die einflussreichsten Nutzer welche <span class="stat-claims">Behauptungen</span> im letzten Monat teilten</p>
 					<div class="table-responsive" id="influential_users_claim"></div>
 				</div>
 				<div class="col-md-6">
 					<!-- <p>Most influential users sharing <span class="">fact checking</span> im letzten Monat</p> -->
-					<p>Die einflussreichsten Nutzer welche <span class="">Fakten</span> im letzten Monat teilten</p>
+					<p>Die einflussreichsten Nutzer welche <span class="stat-facts">Fakten</span> im letzten Monat teilten</p>
 					<div class="table-responsive" id="influential_users_fact_checking"></div>
 				</div>
 			</div>
@@ -61,11 +61,11 @@
 		<section class="tab-pane container-fluid" role="tabpanel" id="active_users">
 			<div class="row">
 				<div class="col-md-6">
-					<p>Die aktivsten Nutzer welche <span class="">Behauptungen</span> im letzten Monat teilten</p>
+					<p>Die aktivsten Nutzer welche <span class="stat-claims">Behauptungen</span> im letzten Monat teilten</p>
 					<div class="table-responsive" id="active_users_claim"></div>
 				</div>
 				<div class="col-md-6">
-					<p>Die aktivsten Nutzer welche <span class="">Fakten</span> im letzten Monat teilten</p>
+					<p>Die aktivsten Nutzer welche <span class="stat-facts">Fakten</span> im letzten Monat teilten</p>
 					<div class="table-responsive" id="active_users_fact_checking"></div>
 				</div>
 			</div>
@@ -81,13 +81,13 @@
 			success: function(data) {
 				// might translate capture date as feststellungsdatum
 				$("#popular_articles_claim").append('<tr><th>Aufnahmedatum</th><th>Titel</th><th>Tweets</th></tr>');
-				$("#popular_articles_fact_checking").append('<tr><th>Aufnahmedatum</th><th>Titel</th><th>Tweets</th></tr>');
+				$("#popular_articles_fact_checking").append('<tr><th>Aufnahmedatum</th><th>Titel</th><th>Tweets</th></tr>');				
 				$.each(data['articles'], function(i, h) {
-					var capture_date = h['capture_date'].split('T')[0];
+					var capture_date = h['date_captured'].split('T')[0];
 					var row = '<tr><td>' + capture_date + '</td>'
 					+ '<td><a href="' + h['canonical_url'] +
 					'" target="_blank">' + h['title'] + '</a></td><td>' +
-					h['number_of_tweets'] + '</td></tr>'
+					h['number_of_tweets'] + '</td></tr>';
 					$("#popular_articles_" + h['site_type']).append(row);
 				});
 				$("#popular_articles_claim").wrapInner('<table class="table table-striped"></table>');
@@ -100,10 +100,10 @@
 			dataType: 'json' ,
 			success: function(data) {
 				// screen name = Anzeigename or Benutzername?
-				$("#active_users_claim").append('<tr><th>Anzeigename</th><th>tweets</th><th>Botometer Punkte</th></tr>');
-				$("#active_users_fact_checking").append('<tr><th>Anzeigename</th><th>tweets</th><th>Botometer Punkte</th></tr>');
-				$("#influential_users_claim").append('<tr><th>Anzeigename</th><th>retweets</th><th>Botometer Punkte</th></tr>');
-				$("#influential_users_fact_checking").append('<tr><th>Anzeigename</th><th>retweets</th><th>Botometer Punkte</th></tr>');
+				$("#active_users_claim").append('<tr><th>Anzeigename</th><th>Tweets</th><th>Botometer Punkte</th></tr>');
+				$("#active_users_fact_checking").append('<tr><th>Anzeigename</th><th>Tweets</th><th>Botometer Punkte</th></tr>');
+				$("#influential_users_claim").append('<tr><th>Anzeigename</th><th>Retweets</th><th>Botometer Punkte</th></tr>');
+				$("#influential_users_fact_checking").append('<tr><th>Anzeigename</th><th>Retweets</th><th>Botometer Punkte</th></tr>');
 				var empty_or_na;
 				// test whether any bot_score exists
 				if (data['spreaders'].every(function(x){return x['bot_score'] === null})){
