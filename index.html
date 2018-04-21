@@ -13,6 +13,15 @@
 	Additional sites might be: <about hoaxy>; <motivation>; <licence>; 
 		link to original site, project (GitHub)  -->
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#select_all').click(function() {
+			    var c = this.checked;
+			    $(':checkbox').prop('checked',c);
+			});
+		});
+
+	</script>
 
 </head>
 
@@ -45,6 +54,7 @@
 				</div>
 				<div class="col-xs-12 text-xs-center">
 					<input type="hidden" name="include_user_mentions" id="include_user_mentions_true" value="true" />
+					<span class="number" title="Suchen Sie nach Behauptungen">1</span>
 					<button class="btn btn-primary btn-blue" id="submit"> Suchen </button>
 				</div>
 				<div class="clearfix"></div>
@@ -56,22 +66,32 @@
 
 	<section id="articles" class="container-fluid">
 		<div class="container">
-			<div>
-				<!-- <p>Select claims and fact checking articles to visualize.</p> -->
-				<p>Wähle Behauptungs- und Fakten geprüfte Artikel zur Darstellung aus. </p>
+			<div class="intro">
+				<!-- <p>Select claims and fact checking articles to visualize.</p> -->				
+				<p>
+					<span class="number" title="Artikel auswählen">2</span>
+					Wähle <span class="bg-claims">Behauptungs</span>- und <span class="bg-facts">Fakten geprüfte</span> Artikel zur Darstellung aus. 
+				</p>
 			</div>
 
 			<p class="text-xs-center">
-				<button class="btn btn-primary" id="visualize_top"> Anzeigen </button>
-
+				<!-- <button class="btn btn-warning" id="select_top20"> Die ersten 20 auswählen </button> -->
+				<button class="btn btn-primary btn-blue" id="visualize_top"> Anzeigen </button>
 			</p>
 
+			<div id="select_all_section">
+				<label>
+					<input type="checkbox" id="select_all" class="checkbox" />
+					Die ersten 20 auswählen
+				</label>
+			</div>
 			<ul class="list-unstyled" id="article_list">
 
 			</ul>
 
 			<div class="clearfix"></div>
 			<div class="text-xs-center">
+				<span class="number" title="Darstellen">3</span>
 				<button class="btn btn-primary btn-blue" id="visualize"> Darstellen </button>
 
 				<span class="text-xs-center" id="load_more">
@@ -137,4 +157,5 @@
 	</div>
 
 	</body>
-	</html>
+
+</html>
