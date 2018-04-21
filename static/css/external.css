@@ -400,3 +400,24 @@ a:active
     text-decoration: underline;
 }
 */
+
+.tab-content p {
+    padding-top: 30px;
+    font-size: 1.25em;
+}
+
+.tab-content .stat-claims,
+.tab-content .stat-facts 
+{
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 8px;
+}
+
+.tab-content .stat-claims {
+    background-color: #4B3F72;
+}
+
+.tab-content .stat-facts {
+    background-color: #F46036;
+}
