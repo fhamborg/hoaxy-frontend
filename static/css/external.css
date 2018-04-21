@@ -67,17 +67,6 @@ section
 
 
 
-
-li.claim, li.claim a, .claim_label
-{
-    color: black;
-    background-color: orange;
-}
-li.fact_checking, li.fact_checking a, .fact_checking_label
-{
-    color: black;
-    background-color: green;
-}
 li label
 {
     padding: 1rem;
@@ -298,6 +287,7 @@ header.opener > .overlay-header-title {
     background-color: #59c7eb;
     color: #fff;
     border: 1px #59c7eb;
+    border-radius: 0;
 }
 
 .btn-blue:hover,
@@ -406,6 +396,33 @@ a:active
     font-size: 1.25em;
 }
 
+li.claim, li.fact_checking {
+    padding: 12px 0;
+}
+
+li.claim,
+li.fact_checking,
+div.intro 
+{
+    font-size: 1.3em;
+}
+
+li.claim, .claim_label,
+li.fact_checking, .fact_checking_label 
+{
+    color: #fff;
+}
+
+li.fact_checking a {
+    color: #000;
+    /* font-style: italic; */
+}
+
+li.claim a {
+    color: #000;
+}
+
+
 .bg-claims,
 .bg-facts 
 {
@@ -414,10 +431,53 @@ a:active
     padding: 0 8px;
 }
 
-.bg-claims {
+.bg-claims, 
+li.claim, 
+li.claim a, 
+.claim_label 
+{
     background-color: #4B3F72;
 }
 
-.bg-facts {
+.bg-facts, 
+li.fact_checking, 
+li.fact_checking a, 
+.fact_checking_label 
+{
     background-color: #F46036;
+}
+
+.number {
+    /* position: absolute; */
+    display: inline-block;
+    font-weight: bold;
+    color: #59c7eb;
+    font-size: 1.5rem;
+    border: solid #59c7eb 3px;
+    border-radius: 500px;
+    line-height: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: -3rem;
+    bottom: 0;
+}
+
+.intro p {
+    margin-left: 3rem;
+    padding-top: 25px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#select_all_section label {
+    font-size: 1.4em;
+    font-weight: 500;   
+
 }
