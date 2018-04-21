@@ -587,7 +587,8 @@ $(document).ready(function () {
 		element_class = "claim";
 
 		string_element += '<li class="rounded ' + element_class + '">';
-		string_element += '	<label>';
+		string_element += ' <div class="checkbox">';
+		string_element += '  <label>';
 		string_element += '		<input type="checkbox" id="' + url.url_id + '" value="' + url.url_id + '" />';
 
 
@@ -600,7 +601,8 @@ $(document).ready(function () {
 		string_element += '			<span class="article_date">am ' + dateline + '</span></span>';
 		string_element += '			<span class="article_stats"><span><b>' + url.number_of_tweets + '</b> Tweets</span></span>';
 		string_element += '			<div class="clearfix"></div>';
-		string_element += '	</label>';
+		string_element += '	 </label>';
+		string_element += ' </div>';
 		string_element += '</li>';
 
 		var f = function (id){
