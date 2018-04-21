@@ -84,9 +84,12 @@
 				$("#popular_articles_fact_checking").append('<tr><th>Aufnahmedatum</th><th>Titel</th><th>Tweets</th></tr>');				
 				$.each(data['articles'], function(i, h) {
 					var capture_date = h['date_captured'].split('T')[0];
+					var canonical_url = h['canonical_url'];
+					var title = h['title'];
+					var source_domain = canonical_url.replace('http://','').replace('https://','').replace('www.','').split(/[/?#]/)[0];
 					var row = '<tr><td>' + capture_date + '</td>'
-					+ '<td><a href="' + h['canonical_url'] +
-					'" target="_blank">' + h['title'] + '</a></td><td>' +
+					+ '<td><a href="' + "index.html#query=" + title + "&sort=relevant" +
+					'" target="_blank">' + title + '</a> (via <a href="'+ canonical_url + '" target="_blank">'+source_domain+')</td><td>' +
 					h['number_of_tweets'] + '</td></tr>';
 					$("#popular_articles_" + h['site_type']).append(row);
 				});
