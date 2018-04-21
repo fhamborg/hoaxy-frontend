@@ -406,18 +406,18 @@ a:active
     font-size: 1.25em;
 }
 
-.tab-content .stat-claims,
-.tab-content .stat-facts 
+.bg-claims,
+.bg-facts 
 {
     color: #fff;
     border-radius: 8px;
     padding: 0 8px;
 }
 
-.tab-content .stat-claims {
+.bg-claims {
     background-color: #4B3F72;
 }
 
-.tab-content .stat-facts {
+.bg-facts {
     background-color: #F46036;
 }
