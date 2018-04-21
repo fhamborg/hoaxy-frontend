@@ -385,3 +385,18 @@ ol li p {
 .impr {
     padding-top: 50px;
 }
+
+#faq dl dt /*, 
+a, 
+a:visited */
+{
+    color: #59c7eb;
+}
+
+/*
+a:hover,
+a:active 
+{
+    text-decoration: underline;
+}
+*/
