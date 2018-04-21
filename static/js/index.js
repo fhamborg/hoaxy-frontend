@@ -592,12 +592,12 @@ $(document).ready(function () {
 
 
 		var pub_date = new Date(url.pub_date);
-		var dateline = $.datepicker.formatDate('M d, yy', pub_date);
+		var dateline = $.datepicker.formatDate('d M, yy', pub_date);
 		var id = Math.floor(Math.random() * 100000);
 
 		string_element += '			<span class="article_title"><a href="' + url.url_raw + '" target="_blank">' + url.title + '</a></span>';
-		string_element += '			<span class=""><span class="article_domain">From <a href="http://' + url.site_domain + '" target="_blank">' + url.site_domain + '</a></span>';
-		string_element += '			<span class="article_date">on ' + dateline + '</span></span>';
+		string_element += '			<span class=""><span class="article_domain">Von <a href="http://' + url.site_domain + '" target="_blank">' + url.site_domain + '</a></span>';
+		string_element += '			<span class="article_date">am ' + dateline + '</span></span>';
 		string_element += '			<span class="article_stats"><span><b>' + url.number_of_tweets + '</b> Tweets</span></span>';
 		string_element += '			<div class="clearfix"></div>';
 		string_element += '	</label>';
