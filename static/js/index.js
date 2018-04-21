@@ -16,10 +16,10 @@ var colors = {
 	"fact_checking" : 'darkblue',
 	"claim" : 'darkblue'},
 	edge_colors : {
-	"fact_checking" : 'green',
-	"fact_checking_dark" : 'green',
-	"claim" : 'orange',
-	"claim_dark" : 'orange'
+	"fact_checking" : '#F46036',
+	"fact_checking_dark" : '#F46036',
+	"claim" : '#4B3F72',
+	"claim_dark" : '#4B3F72'
 }
 };
 
